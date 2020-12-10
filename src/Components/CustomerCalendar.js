@@ -3,10 +3,9 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from 'moment';
 
-
 function CustomerCalendar() {
     const [session, setSession] = useState([]);
-    const localizer = momentLocalizer(moment)
+    const localizer = momentLocalizer(moment);
 
     const getData = () => {
         fetch('https://customerrest.herokuapp.com/gettrainings')
